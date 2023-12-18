@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://images.pexels.com/photos/1646753/pexels-photo-1646753.jpeg?auto=compress&cs=tinysrgb&w=400");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .form-box {
+        width: 300px;
+        height: 400px;
+        position: relative;
+        margin: 6% auto;
+        padding: 5px;
+        background: rgb(242, 234, 234);
+        border-radius: 20px;
+        overflow: hidden ;
+    }
+
+    .button-box {
+        width: 200px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 20px 4px rgb(217, 103, 3);
+        border-radius: 30px;
+        display: flex;
+    }
+
+    .toggle-btn {
+        padding: 10px 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #btn {
+        top: 0px;
+        left: 0px;
+        width: 110px;
+        height: 100%;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        position: absolute;
+        border-radius: 30px;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-icon img {
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0px 0px 15px 2px rgb(229, 118, 7);
+    }
+
+    .input-group {
+        margin-left: 30px;
+        top: 180px;
+        position: absolute;
+        width: 240px;
+        transition: .5s;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px 0px;
+        max-width: 5px 0px;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .check-box {
+        margin: 10px 0px;
+    }
+
+    .input-group span {
+        margin: 10px 5px;
+        color: rgb(82, 80, 84);
+    }
+
+    .submit-btn {
+        width: 200px;
+        height: 40px;
+        margin: 10px 30px;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    #ragister {
+        left: 300px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button class="toggle-btn" onclick="login()">Login</button>
+                <button class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.facebook.com/login/"><img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_640.png"></a>
+               <a href="https://www.instagram.com/accounts/login/"> <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="https://cdn.pixabay.com/photo/2015/03/10/17/30/twitter-667462_640.png"></a>
+            </div>
+            <div id="login" class="input-group">
+                <input type="text" placeholder="User Id" class="input-field">
+                <input type="password" placeholder="Enter Pasword" class="input-field">
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </div>
+            <div id="ragister" class="input-group">
+                <input type="text" placeholder="User Id" class="input-field">
+                <input type="email" placeholder="E-mail Id" class="input-field">
+                <input type="password" placeholder="Enter Password" class="input-field">
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const log = document.getElementById('login');
+        const reg = document.getElementById('ragister');
+        const btn = document.getElementById('btn');
+
+        function register(){
+            log.style.left = "-350px";
+            reg.style.left = "0px";
+            btn.style.left = "90px";
+        }
+        function login(){
+            log.style.left = "0px";
+            reg.style.left = "290px";
+            btn.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>
